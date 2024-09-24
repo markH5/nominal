@@ -27,8 +27,9 @@ minutesToSeconds(seconds)
 ```
 
 Nominal types solve this problem
+
 ```ts
-import { Nominal, nominal } from 'nominal-types';
+import { Nominal } from 'nominal-types';
 
 type Minutes = Nominal<'Minutes', number>;
 type Seconds = Nominal<'Seconds', number>;
@@ -36,7 +37,7 @@ type Seconds = Nominal<'Seconds', number>;
 const minutesToSeconds = (minutes: Minutes) => minutes * 60
 
 // You can directly type cast or use nominal.make
-const seconds = nominal.make<Seconds>(420)
+const seconds = 420 as Seconds
 const minutes = 1337 as Minutes
 
 // doesn't work, yay type safety
@@ -108,9 +109,9 @@ binarySearch(nonEmpty(sort(regularArray)))
 More examples in [examples folder](./examples), you can also see them typed on replit.
 
 | Example     | Link                                                      |
-|-------------|-----------------------------------------------------------|
-| basic       |    https://replit.com/@CryogenicPlanet/Nominal#basic.ts   |
-| sorting     |    https://replit.com/@CryogenicPlanet/Nominal#sort.ts    |
+| ----------- | --------------------------------------------------------- |
+| basic       | https://replit.com/@CryogenicPlanet/Nominal#basic.ts      |
+| sorting     | https://replit.com/@CryogenicPlanet/Nominal#sort.ts       |
 | composing   | https://replit.com/@CryogenicPlanet/Nominal#composing.ts  |
 | safeRecords | https://replit.com/@CryogenicPlanet/Nominal#safeRecord.ts |
 
