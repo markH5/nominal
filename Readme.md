@@ -36,7 +36,6 @@ type Seconds = Nominal<'Seconds', number>;
 
 const minutesToSeconds = (minutes: Minutes) => minutes * 60
 
-// You can directly type cast or use nominal.make
 const seconds = 420 as Seconds
 const minutes = 1337 as Minutes
 
